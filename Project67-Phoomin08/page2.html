@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ดาวพุธ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg') no-repeat center/cover;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(0,0,0,0.5);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 0 20px #ffaa33;
+    }
+    header h1 { font-size: 3em; color: #ffcc00; letter-spacing:2px; }
+    nav { margin-top: 10px; }
+    nav a {
+      text-decoration: none;
+      color: #ffcc00;
+      margin: 0 15px;
+      font-weight: 700;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ff9966; }
+
+    .content {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      text-align: left;
+      background-color: rgba(255, 255, 150, 0.15);
+      border: 2px solid rgba(255, 255, 150, 0.5);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 150, 0.3);
+      backdrop-filter: blur(5px);
+    }
+    .content h2 { 
+      font-size: 2.5em; 
+      text-align:center; 
+      color: #ff6600; 
+      margin-bottom:20px;
+    }
+    .content p { font-size:1.2em; line-height:1.8; margin-bottom:15px; }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 15px;
+      background: rgba(255,255,255,0.05);
+      font-size: 0.9em;
+      color: #fffccc;
+      box-shadow: 0 -5px 20px #ffaa33;
+    }
+
+    /* Animation วูบวาบกรอบ */
+    @keyframes glow {
+      0% { box-shadow: 0 0 50px rgba(255,204,0,0.5); }
+      50% { box-shadow: 0 0 80px rgba(255,255,0,0.7); }
+      100% { box-shadow: 0 0 50px rgba(255,204,0,0.5); }
+    }
+    .content { animation: glow 3s ease-in-out infinite alternate; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ดาวพุธ</h1>
+    <nav>
+      <a href="main.html">หน้าแรก</a>
+      <a href="page1.html">ดวงอาทิตย์</a>
+      <a href="page2.html">ดาวพุธ</a>
+      <a href="page3.html">ดาวศุกร์</a>
+      <a href="page4.html">โลก</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>เกี่ยวกับดาวพุธ</h2>
+    <p>ดาวพุธเป็นดาวเคราะห์ดวงในสุดของระบบสุริยะ อยู่ใกล้ดวงอาทิตย์มากที่สุด</p>
+    <p>มีขนาดเล็กที่สุดในบรรดาดาวเคราะห์ทั้ง 8 ดวง และไม่มีบรรยากาศหนาแน่น ทำให้ผิวดาวเต็มไปด้วยหลุมอุกกาบาต</p>
+    <p>ดาวพุธหมุนรอบตัวเองช้า แต่โคจรรอบดวงอาทิตย์อย่างรวดเร็ว ครบหนึ่งรอบใน 88 วัน</p>
+    <p>อุณหภูมิบนดาวพุธมีความสุดขั้ว ตั้งแต่ร้อนจัดในกลางวันถึงเย็นจัดในเวลากลางคืน</p>
+  </section>
+
+  <footer>
+    จัดทำโดย : นายภูมินทร์ ระวังงาน ชั้น ม.6/7 เลขที่ 8
+  </footer>
+
+</body>
+</html>
