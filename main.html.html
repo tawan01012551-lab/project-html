@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ระบบสุริยะ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background: #0a0a0f;
+      position: relative;
+      height: 100vh;
+    }
+
+    /* ยานอวกาศ */
+    body::before {
+      content: "";
+      position: fixed;
+      bottom: 10%;
+      left: 10%;
+      width: 250px;
+      height: 150px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Space_Shuttle_Columbia_launching.jpg/640px-Space_Shuttle_Columbia_launching.jpg') no-repeat center/cover;
+      transform: rotate(-10deg);
+      z-index: -1;
+      opacity: 0.6;
+      animation: fly 30s linear infinite;
+    }
+    @keyframes fly {
+      0% { transform: translateX(0) rotate(-10deg); }
+      100% { transform: translateX(1500px) rotate(-10deg); }
+    }
+
+    /* ดาวระยิบระยับ */
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 3s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 0 30px #8a2be2;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ffdd55;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #ffcc00;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ff88aa;
+    }
+    .hero img {
+      max-width: 400px;
+      width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 0 50px 15px #8a2be2;
+      animation: float 6s ease-in-out infinite alternate;
+      display: block;
+      margin: 30px auto;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-15px); }
+    }
+
+    .content {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+      background-color: rgba(255, 255, 150, 0.1);
+      border: 2px solid rgba(255, 255, 150, 0.5);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 150, 0.3);
+      backdrop-filter: blur(5px);
+    }
+    .content h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffcc00;
+      text-align: center;
+    }
+    .content p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 15px;
+      background: rgba(255,255,255,0.05);
+      font-size: 0.9em;
+      color: #ccc;
+      box-shadow: 0 -5px 30px #8a2be2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ระบบสุริยะ</h1>
+    <nav>
+      <a href="main.html">หน้าแรก</a>
+      <a href="page1.html">ดวงอาทิตย์</a>
+      <a href="page2.html">ดาวพุธ</a>
+      <a href="page3.html">ดาวศุกร์</a>
+      <a href="page4.html">โลก</a>
+    </nav>
+  </header>
+
+  <!-- ดาวระยิบระยับ -->
+  <script>
+    for(let i=0;i<100;i++){
+      let star = document.createElement('div');
+      star.className = 'star';
+      let size = Math.random()*3 + 1;
+      star.style.width = size+'px';
+      star.style.height = size+'px';
+      star.style.top = Math.random()*window.innerHeight+'px';
+      star.style.left = Math.random()*window.innerWidth+'px';
+      star.style.animationDuration = (Math.random()*2+1)+'s';
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <section class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg" alt="ระบบสุริยะ">
+  </section>
+
+  <section class="content">
+    <h2>ยินดีต้อนรับสู่ระบบสุริยะ</h2>
+    <p>
+      ระบบสุริยะของเราประกอบด้วยดวงอาทิตย์เป็นศูนย์กลาง และดาวเคราะห์ทั้ง 8 ดวงที่โคจรรอบมัน รวมถึงดาวเคราะห์น้อย ดวงจันทร์ และวัตถุท้องฟ้าอื่น ๆ อีกมากมาย
+    </p>
+    <p>
+      ยานอวกาศสำรวจอวกาศทำให้เราเข้าใจระบบสุริยะได้มากขึ้น และเห็นดาวเคราะห์ต่าง ๆ อย่างใกล้ชิด  
+      การเรียนรู้จักระบบสุริยะช่วยให้เราเข้าใจที่มาของโลกและชีวิต
+    </p>
+  </section>
+
+  <footer>
+    จัดทำโดย : นายภูมินทร์ ระวังงาน ชั้น ม.6/7 เลขที่ 8
+  </footer>
+
+</body>
+</html>
